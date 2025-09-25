@@ -1,0 +1,92 @@
+/* Untuk HP (layar kecil) */
+@media (max-width: 600px) {
+  body {
+    background: maroon;
+  }
+}
+
+/* Untuk tablet */
+@media (min-width: 601px) and (max-width: 1024px) {
+  body {
+    background: maroon;
+  }
+}
+
+/* Untuk laptop/desktop */
+@media (min-width: 1025px) {
+  body {
+    background: maroon;
+  }
+}
+
+body {
+  background-color: maroon;
+}
+
+.container {
+  display: flex;
+  flex-direction: column; /* supaya judul di atas, gambar di bawah */
+  align-items: center; /* teks dan gambar rata tengah */
+}
+
+.container .h1 {
+  text-align: center;
+  font-family: permanent marker, Arial, Helvetica, sans-serif;
+  color: white;
+  font-size: 2rem;
+}
+
+.container-img {
+  display: flex;
+  justify-content: center; /* gambar sejajar ke tengah */
+  gap: 20px; /* kasih jarak antar gambar */
+  flex-wrap: wrap; /* biar responsif, turun ke bawah kalau layar kecil */
+}
+
+.container-img img:not(.ig-icon, .tiktok-icon) {
+  height: 250px;
+  width: 200px;
+  border-radius: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.container-img img:not(.ig-icon, .tiktok-icon):hover {
+  transform: scale(1.1); /* membesar sedikit */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* kasih bayangan */
+}
+
+.container-img p {
+  text-align: center;
+  font-family: permanent marker;
+  color: whitesmoke;
+  font-size: 1.1rem;
+}
+
+.ig-icon {
+  width: 50px;
+  height: 50px;
+  transition: transform 0.3s ease;
+}
+
+.ig-icon:hover {
+  transform: rotate(20deg) scale(1.5);
+}
+
+.tiktok-icon {
+  width: 80px;
+  height: 80px;
+  transition: transform 0.3s ease;
+}
+
+.tiktok-icon:hover {
+  transform: rotate(-20deg) scale(1.5);
+}
+
+.icon-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* jarak antar icon */
+  margin-top: 8px;
+}
